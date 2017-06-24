@@ -1,0 +1,18 @@
+.navbar-default {
+    background: #ECEFF1 url("/images/brand.png") no-repeat right top;
+    background-size: contain;
+    min-height: 52px;
+}
+
+@media (min-width: 1200px) {
+    .navbar-default {
+        min-height: 52px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default {
+        background-size: auto 50px;
+        background-position: center top;
+    }
+}

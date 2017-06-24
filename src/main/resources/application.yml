@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  display-name: 'SimpleCurrencyPredicator'
+
+spring:
+  datasource:
+    driver-class-name: @scp.db.driver.name@
+    url: @scp.db.url@
+    username: @scp.db.user@
+    password: @scp.db.password@
+    test-on-borrow: true
+    validation-query: SELECT 1
+    validation-interval: 5000
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+
+liquibase:
+  change-log: classpath:/db/changelog/master.xml
+  enabled: true
+  contexts: @scp.db.contexts@

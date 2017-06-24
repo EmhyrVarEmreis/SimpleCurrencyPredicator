@@ -1,0 +1,119 @@
+html, body {
+    height: 100%;
+}
+
+.pointer-hand {
+    cursor: pointer;
+}
+
+.ng-invalid.ng-touched {
+    background-color: #607D8B;
+}
+
+.top-margin {
+    margin-top: 5px;
+}
+
+.app-hr {
+    border: 0;
+    border-top: 1px solid #607D8B;
+}
+
+.page-header {
+    border-bottom: 1px solid #607D8B;
+}
+
+.modal-footer {
+    border-top: 1px solid #607D8B;
+}
+
+.modal-header {
+    border-bottom: 1px solid #607D8B;
+}
+
+.error {
+    background-color: #ffdcdf;
+}
+
+input.ng-invalid.ng-touched {
+    background-color: #ffdcdf;
+}
+
+.glph-def-em {
+    font-size: 12px;
+}
+
+.container {
+}
+
+.table-row-highlight tr:hover {
+    background-color: rgba(33, 33, 33, 0.05);
+}
+
+.table-row-cursor-hand {
+    cursor: pointer;
+}
+
+.text-normal {
+    font-weight: normal;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.modal-body {
+    margin-top: 20px;
+}
+
+.circular-avatar {
+    box-shadow: 0 0 0 2px #fff;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+}
+
+.circular-avatar-selected {
+    box-shadow: 0 0 0 3px #2e7d32;
+}
+
+.circular-64 {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+div.circular-avatar-text {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    display: table;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+
+    -webkit-transition: opacity 200ms;
+    -moz-transition: opacity 200ms;
+    -o-transition: opacity 200ms;
+    transition: opacity 200ms;
+}
+
+div.circular-avatar-text div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.circular-wrapper:hover div.circular-avatar-text {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .transaction-header, .user-header {
+        text-align: center;
+    }
+}

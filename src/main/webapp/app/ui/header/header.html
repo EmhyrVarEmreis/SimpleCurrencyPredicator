@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a href="#/profile">
+                    <img ng-show="hdr.userData.avatar.string" class="circular-avatar" width="32" src=""
+                         data-ng-src="{{hdr.userData.avatar.string}}" alt="avatar"/>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/home" class="active">
+                        <span class="glyphicon glyphicon-home glph-def-em" aria-hidden="true"></span>
+                        Home
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span class="glyphicon glyphicon-user glph-def-em" aria-hidden="true"></span>
+                        {{hdr.userData.lastName}} {{hdr.userData.firstName}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" ng-click="hdr.logout()">
+                                <span class="glyphicon glyphicon-log-out glph-def-em" aria-hidden="true"></span>
+                                Log Out
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

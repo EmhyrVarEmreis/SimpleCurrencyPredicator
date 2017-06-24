@@ -1,0 +1,22 @@
+.panel-main {
+    margin: 10px 40px 25px;
+}
+
+.panel-list {
+    margin-bottom: 0px;
+}
+
+.panel-sub-titles {
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+.panel-header-avatar-margin {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+    .panel-main {
+        margin: 10px 8px 25px;
+    }
+}
