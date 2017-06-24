@@ -1,0 +1,14 @@
+<label ng-show="label" for="{{name}}">{{label}}</label>
+<div class="input-group">
+    <input type="text"
+           class="form-control"
+           name="{{name}}"
+           id="{{name}}"
+           placeholder="{{placeholder}}"
+           ng-disabled="ngDisabled"
+           ng-model="ngModel"/>
+    <span class="input-group-addon"
+          style="cursor: pointer;">
+        <span class="glyphicon glyphicon-calendar"></span>
+    </span>
+</div>

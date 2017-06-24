@@ -7,8 +7,9 @@
             url:     "/home",
             views:   {
                 'content@': {
-                    templateUrl: '/ui/content/home/home.html',
-                    controller:  'HomeCtrl'
+                    templateUrl:  '/ui/content/home/home.html',
+                    controller:   'HomeCtrl',
+                    controllerAs: 'vm'
                 }
             },
             resolve: {}

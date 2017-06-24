@@ -4,4 +4,66 @@
             <small>Simple Currency Predicator</small>
         </h1>
     </div>
+
+    <div class="panel-last-row">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>Chart Controller</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 form-group">
+                <ui-select ng-model="vm.queryOptions.code">
+                    <ui-select-match>
+                        <span ng-bind="$select.selected.name"></span>
+                    </ui-select-match>
+                    <ui-select-choices
+                            repeat="currency.code as currency in (vm.currencies | filter: $select.search) track by currency.code">
+                        <span ng-bind-html="currency.name | highlight: $select.search"></span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="col-sm-3 form-group">
+                <date-time-picker
+                        id="startDate"
+                        name="startDate"
+                        placeholder="startDate"
+                        format="YYYY-MM-DD"
+                        ng-model="vm.queryOptions.startDate"></date-time-picker>
+            </div>
+            <div class="col-sm-3 form-group">
+                <date-time-picker
+                        id="endDate"
+                        name="endDate"
+                        placeholder="endDate"
+                        format="YYYY-MM-DD"
+                        ng-model="vm.queryOptions.endDate"></date-time-picker>
+            </div>
+            <div class="col-sm-2 form-group">
+                <button class="btn btn-success"
+                        ng-disabled="!vm.queryOptions.code || !vm.queryOptions.startDate || !vm.queryOptions.endDate"
+                        ng-click="vm.fetch(vm.queryOptions)">
+                    Fetch
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>Chart View</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <canvas id="line"
+                        class="chart chart-line"
+                        chart-data="vm.data"
+                        chart-labels="vm.labels"
+                        chart-series="vm.series"
+                        chart-options="vm.options"
+                        chart-dataset-override="vm.datasetOverride">
+                </canvas>
+            </div>
+        </div>
+    </div>
+
 </div>

@@ -5,7 +5,10 @@
         'LocalStorageModule',
         'ui.router',
         'ngResource',
-        'ngTable'
+        'ngTable',
+        'chart.js',
+        'ui.select',
+        'ngSanitize'
     ]);
 
 })();
