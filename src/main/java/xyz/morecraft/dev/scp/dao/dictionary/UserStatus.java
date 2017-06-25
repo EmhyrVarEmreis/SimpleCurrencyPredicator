@@ -1,4 +1,4 @@
-package xyz.morecraft.dev.scp.dao;
+package xyz.morecraft.dev.scp.dao.dictionary;
 
 public enum UserStatus {
 

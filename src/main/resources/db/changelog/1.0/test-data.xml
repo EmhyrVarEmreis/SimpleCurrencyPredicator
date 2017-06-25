@@ -38,6 +38,26 @@
             <column name="created">2017-10-11 10:55:01</column>
         </insert>
 
+        <insert tableName="dct_currency">
+            <column name="code">USD</column>
+            <column name="name">American Dollar</column>
+        </insert>
+
+        <insert tableName="dct_currency">
+            <column name="code">JPY</column>
+            <column name="name">Japanese Yen</column>
+        </insert>
+
+        <insert tableName="dct_currency">
+            <column name="code">EUR</column>
+            <column name="name">European Euro</column>
+        </insert>
+
+        <insert tableName="dct_currency">
+            <column name="code">MXN</column>
+            <column name="name">Mexican Peso</column>
+        </insert>
+
     </changeSet>
 
 

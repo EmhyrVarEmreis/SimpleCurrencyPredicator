@@ -55,6 +55,17 @@
             </column>
         </createTable>
 
+        <createTable tableName="dct_currency">
+            <column name="code"
+                    type="nvarchar(3)">
+                <constraints primaryKey="true"
+                             unique="true"
+                             primaryKeyName="PK_dct_currency_code"/>
+            </column>
+            <column name="name"
+                    type="nvarchar(128)"/>
+        </createTable>
+
 
     </changeSet>
 

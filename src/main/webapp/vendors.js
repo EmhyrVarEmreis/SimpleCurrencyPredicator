@@ -13,3 +13,4 @@ require("eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.mi
 require("eonasdan-bootstrap-datetimepicker");
 require("ui-select");
 require("ui-select/dist/select.min.css");
+window.moment = require("moment");

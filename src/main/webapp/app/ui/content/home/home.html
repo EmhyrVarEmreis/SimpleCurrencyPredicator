@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 form-group">
+            <div class="col-sm-5 form-group">
                 <ui-select ng-model="vm.queryOptions.code">
                     <ui-select-match>
                         <span ng-bind="$select.selected.name"></span>
@@ -29,6 +29,7 @@
                         name="startDate"
                         placeholder="startDate"
                         format="YYYY-MM-DD"
+                        max-date="now"
                         ng-model="vm.queryOptions.startDate"></date-time-picker>
             </div>
             <div class="col-sm-3 form-group">
@@ -39,8 +40,8 @@
                         format="YYYY-MM-DD"
                         ng-model="vm.queryOptions.endDate"></date-time-picker>
             </div>
-            <div class="col-sm-2 form-group">
-                <button class="btn btn-success"
+            <div class="col-sm-1 form-group">
+                <button class="btn btn-success pull-right"
                         ng-disabled="!vm.queryOptions.code || !vm.queryOptions.startDate || !vm.queryOptions.endDate"
                         ng-click="vm.fetch(vm.queryOptions)">
                     Fetch

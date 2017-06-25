@@ -11,7 +11,9 @@
                     name:        "@",
                     placeholder: "@",
                     format:      "@",
-                    locale:      "@"
+                    locale:      "@",
+                    minDate:     "@",
+                    maxDate:     "@"
                 },
                 restrict:    'E',
                 templateUrl: '/directive/dateTimePicker/dateTimePicker.html',
@@ -20,10 +22,28 @@
                     $scope.locale = $scope.locale || 'en';
 
                     var elementDiv = element.find('div');
-                    elementDiv.datetimepicker({
+
+                    var options = {
                         format: $scope.format,
                         locale: $scope.locale
-                    });
+                    };
+
+                    if ($scope.minDate) {
+                        if ($scope.minDate === 'now') {
+                            options.minDate = moment();
+                        } else {
+                            options.minDate = moment($scope.minDate);
+                        }
+                    }
+                    if ($scope.maxDate) {
+                        if ($scope.maxDate === 'now') {
+                            options.maxDate = moment();
+                        } else {
+                            options.maxDate = moment($scope.maxDate);
+                        }
+                    }
+
+                    elementDiv.datetimepicker(options);
 
                     elementDiv.on('dp.change', function (event) {
                         $scope.$apply(function () {

@@ -3,7 +3,7 @@ package xyz.morecraft.dev.scp.security;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import xyz.morecraft.dev.scp.dao.User;
-import xyz.morecraft.dev.scp.dao.UserStatus;
+import xyz.morecraft.dev.scp.dao.dictionary.UserStatus;
 
 import java.util.Collection;
 import java.util.Collections;

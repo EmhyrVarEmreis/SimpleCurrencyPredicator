@@ -1,26 +1,26 @@
 package xyz.morecraft.dev.scp.dao;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "prv_object")
 @Inheritance(strategy = InheritanceType.JOINED)
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class PrivilegeObject implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     protected Long id;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {

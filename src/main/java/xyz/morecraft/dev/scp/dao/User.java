@@ -3,6 +3,7 @@ package xyz.morecraft.dev.scp.dao;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import xyz.morecraft.dev.scp.dao.dictionary.UserStatus;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

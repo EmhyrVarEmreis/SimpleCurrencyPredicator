@@ -1,23 +1,18 @@
 (function () {
     'use strict';
 
-    angular.module('simpleCurrencyPredicator').controller('HomeCtrl', function ($scope, currencyFactory) {
+    angular.module('simpleCurrencyPredicator').controller('HomeCtrl', function ($scope, currencyFactory, dictionaryFactory) {
         var vm = this;
+
+        vm.currencies = [];
+
+        dictionaryFactory.query({name: 'currency'}).$promise.then(function (data) {
+            vm.currencies = data;
+        });
 
         vm.queryOptions = {
             table: 'a'
         };
-
-        vm.currencies = [
-            {
-                code: 'usd',
-                name: 'American Dollar'
-            },
-            {
-                code: 'jpy',
-                name: 'Japanese Yen'
-            }
-        ];
 
         vm.datasetOverride = [
             {
@@ -47,7 +42,7 @@
                     vm.labels.push(rate.effectiveDate);
                     vm.data[0].push(rate.mid);
                 }
-            })
+            });
         };
 
     });
