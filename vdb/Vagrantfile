@@ -21,10 +21,4 @@ Vagrant::Config.run do |config|
   # PostgreSQL Server port forwarding
   config.vm.forward_port 5432, 15432
 
-  config.vm.provider "virtualbox" do |v|
-    v.gui = false
-    v.memory = 1024
-    v.cpus = 2
-  end
-
 end
